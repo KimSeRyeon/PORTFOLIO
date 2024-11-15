@@ -1,0 +1,74 @@
+body {
+   margin: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+}
+
+.clock {
+   position: relative;
+   height: 500px;
+   width: 500px;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.time {
+   position: absolute;
+   top: 50px;
+   left: 50%;
+}
+
+/* 시계 중앙 점 */
+#center {
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   background-color: black;
+   border-radius: 50%;
+   z-index: 10;
+   /* opacity: 0; */
+}
+
+/* 시침 */
+#hour {
+   position: absolute;
+   width: 10px;
+   height: 130px;
+   background-color: black;
+   top: 75px;
+   transform-origin: 50% 100%;
+   transform: rotate(0deg);
+   transition: transform 0.5s ease;
+   border-radius: 50px;
+}
+
+/* 분침 */
+#min {
+   position: absolute;
+   width: 8px;
+   height: 160px;
+   background-color: black;
+   top: 40px;
+   transform-origin: 50% 100%;
+   transform: rotate(0deg);
+   transition: transform 0.5s ease;
+   border-radius: 50px;
+}
+
+/* 초침 */
+#sec {
+   position: absolute;
+   width: 5px;
+   height: 190px;
+   background-color: red;
+   top: 10px;
+
+   transform-origin: 50% 100%;
+   transform: rotate(0deg);
+   transition: transform 0.1s ease;
+   border-radius: 50px;
+}

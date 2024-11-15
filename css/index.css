@@ -93,12 +93,91 @@ body {
       text-align: center;
       line-height: 120px;
    }
+
+   /*시계 배경*/
    .page1 h1 img {
-      width: 200px;
+      width: 205px;
       position: relative;
       left: 30px;
       transform: scaleX(1.1);
       margin-right: 60px;
+   }
+
+   /* 시계 스타일 */
+   .clock_wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+   }
+
+   .clock {
+      position: relative;
+      height: 300px; /* 크기 줄임 */
+      width: 300px; /* 크기 줄임 */
+      left: 36.5%; /* 위치 조정 */
+      top: 51%; /* 위치 조정 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   .time {
+      position: absolute;
+      top: 20%;
+      opacity: 1;
+   }
+
+   /* 시계 중앙 점 */
+   #center {
+      width: 15px; /* 크기 줄임 */
+      height: 15px; /* 크기 줄임 */
+      background-color: #222;
+      border-radius: 50%;
+      z-index: 10;
+      margin-bottom: 1px;
+      margin-left: -5px;
+      /* opacity: 0; */
+   }
+
+   /* 시침 */
+   #hour {
+      position: absolute;
+      width: 6px; /* 크기 줄임 */
+      height: 46px; /* 크기 줄임 */
+      background-color: #222;
+      top: 48px;
+      left: -3px;
+      transform-origin: 50% 100%;
+      transform: rotate(0deg);
+      transition: transform 0.5s ease;
+      border-radius: 50px;
+   }
+
+   /* 분침 */
+   #min {
+      position: absolute;
+      width: 6px; /* 크기 줄임 */
+      height: 60px; /* 크기 줄임 */
+      background-color: #222;
+      top: 30px; /* 위치 조정 */
+      left: -2px;
+      transform-origin: 50% 100%;
+      transform: rotate(0deg);
+      transition: transform 0.5s ease;
+      border-radius: 50px;
+   }
+
+   /* 초침 */
+   #sec {
+      position: absolute;
+      width: 4px; /* 크기 줄임 */
+      height: 75px; /* 크기 줄임 */
+      background-color: red;
+      top: 19px; /* 위치 조정 */
+      transform-origin: 50% 100%;
+      transform: rotate(0deg);
+      transition: transform 0.1s ease;
+      border-radius: 50px;
    }
 
    .page1 p {
@@ -132,6 +211,7 @@ body {
       overflow: hidden;
       position: relative;
    }
+   /*어바웃 첫화면 보였다가 안보이기*/
    .pag2_wrap {
       display: none;
    }
@@ -212,22 +292,43 @@ body {
    .catch p:first-child {
       font-size: 70px;
    }
-
-   .colon {
+   /*colon_show_img*/
+   .colon_show {
       width: 100%;
    }
-   .colon img {
+   .colon_show img {
       width: 120px;
+      opacity: 0;
    }
-   .colon li:first-child {
+
+   .colon_show li:first-child {
       margin-left: 60.5%;
       margin-top: -7%;
    }
-   .colon li:last-child {
+   .colon_show li:nth-child(2) {
       transform: scaleX(-1) scaleY(-1);
       margin-top: 10%;
-      margin-right: 2%;
+      margin-right: -18%;
    }
+
+   /*colon_hide_img*/
+   .colon_hide {
+      width: 100%;
+   }
+   .colon_hide img {
+      width: 120px;
+      opacity: 1;
+   }
+   .colon_hide li:nth-child(1) {
+      margin-left: -550px;
+      margin-top: -8%;
+   }
+   .colon_hide li:nth-child(2) {
+      transform: scaleX(-1) scaleY(-1);
+      margin-top: -9%;
+      margin-left: 80px;
+   }
+
    .circle-container {
       width: 7%;
       margin-top: -350px;
@@ -243,13 +344,17 @@ body {
       border-radius: 50%;
       background-color: transparent;
    }
-   /*-------*/
-
+   /*---어바웃 두번 째 안보였다 보이기---*/
+   .profile_wrap {
+      opacity: 1;
+   }
    .profile-card {
       width: 32%;
       border-radius: 12px;
-      margin: 150px 150px;
+      margin: 100px;
+      margin-left: 250px;
       text-align: center;
+      box-sizing: border-box;
    }
 
    .profile-image {
@@ -259,8 +364,8 @@ body {
    }
 
    .profile-image .circle {
-      width: 250px;
-      height: 250px;
+      width: 300px;
+      height: 300px;
       border-radius: 50%;
       background-color: #0052ff;
       position: absolute;
@@ -271,8 +376,8 @@ body {
    }
 
    .profile-image img {
-      width: 250px;
-      height: 250px;
+      width: 300px;
+      height: 300px;
       border-radius: 50%;
       object-fit: cover;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
@@ -360,16 +465,21 @@ body {
    /*왼쪽 소개*/
 
    .right-txt {
-      margin-left: 15%;
-      margin-top: 1%;
+      margin-left: 5%;
+      margin-top: 2%;
       z-index: 999;
    }
    .right-txt h2 {
-      font-size: 50px;
+      font-size: 55px;
    }
    .right-txt h3 {
       font-size: 30px;
       margin: 0px;
+   }
+   .right-txt > div h3 {
+      width: 670px;
+      border-bottom: 3px solid #003ab8;
+      padding-bottom: 10px;
    }
 
    .right-txt .point {
@@ -377,30 +487,59 @@ body {
    }
 
    /* 리스트 스타일 */
-   ul {
+   .right-info {
+      margin-top: 50px;
+   }
+
+   .right-info h4 {
+      color: #003ab8;
+   }
+   .right-info ul {
       padding: 0;
+      display: block;
       margin: 0 0 20px;
    }
 
-   .right-info li {
+   .right-info ul li {
       list-style: circle;
-
+      display: block;
       font-size: 14px;
       margin: 8px 0;
       line-height: 1.5;
    }
+   .EdLi {
+      display: flex;
+   }
 
-   /* Skills 이미지 영역 */
+   .EdLi > div:nth-child(2) {
+      margin-bottom: 50px;
+   }
+   .EdLi .license {
+      margin-top: 65px;
+   }
+   .Award {
+      margin-left: 100px;
+   }
+
+   /* Skills 컨테이너 */
    .skills {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px; /* 이미지 간격 */
+      gap: 8px;
    }
-
-   .skills img {
-      width: 40px; /* 임시 이미지 크기 */
-      height: 40px;
-      object-fit: contain;
+   .skill h4 {
+      margin-bottom: 10px;
+   }
+   .circle_icon {
+      width: calc(12.5% - 8px);
+      height: 80px;
+      background-color: #003ab8;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 80px;
+      color: white;
+      font-size: 16px;
+      flex-shrink: 0;
    }
 
    /* --------------- */

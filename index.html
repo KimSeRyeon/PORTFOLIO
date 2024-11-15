@@ -36,17 +36,34 @@
             <h1>
                <span class="port">PORT</span>
                <span class="folio"
-                  ><br />F<img src="img/8682904 copy.png" />LIO</span
+                  ><br />F<img src="img/clock_bg.png" />LIO</span
                >
             </h1>
+
+            <!--시계 초침, 분침, 시침-->
+            <div class="clock">
+               <div id="center"></div>
+               <div class="time">
+                  <div id="hour"></div>
+                  <div id="min"></div>
+                  <div id="sec"></div>
+               </div>
+            </div>
          </section>
          <div class="wrap">
             <section class="page2" id="page2">
-               <ul class="colon">
+               <ul class="colon_show">
                   <!--오른쪽으로 무브-->
                   <li><img src="img/따옴표 copy.svg" /></li>
                   <li><img src="img/따옴표 copy.svg" /></li>
+                  <li>
+                     <ul class="colon_hide">
+                        <li><img src="img/따옴표 copy.svg" /></li>
+                        <li><img src="img/따옴표 copy.svg" /></li>
+                     </ul>
+                  </li>
                </ul>
+
                <div class="circle-container">
                   <div class="border-circle"></div>
                   <div class="border-circle"></div>
@@ -94,7 +111,7 @@
                      <span class="circle01"></span>
                   </div>
                </div>
-               <!--profile show-->
+               <!-- Profile Section -->
                <div class="profile_wrap">
                   <div class="profile-card">
                      <div class="profile-image">
@@ -102,6 +119,7 @@
                            <div class="circle"></div>
                            <img
                               src="img/63445dbe99ff16cbe0c0e9b93aabf737.jpg"
+                              alt="Profile Image"
                            />
                         </div>
                         <div class="name">
@@ -112,28 +130,31 @@
                         </div>
                      </div>
 
+                     <!-- Contact Information -->
                      <div class="contact-info">
                         <ul>
                            <li>
-                              <img src="img/phon.svg" />
+                              <img src="img/phon.svg" alt="Phone Icon" />
                               <p>010-3230-1854</p>
                            </li>
                            <li>
-                              <img src="img/sns.png" />
+                              <img src="img/sns.png" alt="SNS Icon" />
                               <p>@se_ryeonnnn</p>
                            </li>
                         </ul>
                         <ul>
                            <li>
-                              <img src="img/massege.svg" />
+                              <img src="img/massege.svg" alt="Email Icon" />
                               <p>seryeonkim@gmail.com</p>
                            </li>
                            <li>
-                              <img src="img/git.png" />
+                              <img src="img/git.png" alt="Git Icon" />
                               <p>seryeonkimmm</p>
                            </li>
                         </ul>
                      </div>
+
+                     <!-- Hashtags -->
                      <div class="hashtags">
                         <div class="hashtag-group">
                            <p># 열정적인</p>
@@ -147,62 +168,110 @@
                         </div>
                      </div>
                   </div>
+
+                  <!-- Right Text Section -->
                   <div class="right-txt">
-                     <h2>
-                        <span>안녕하세요!</span>
-                     </h2>
-                     <h3>
-                        한계없이 앞으로 나아가는 웹디자이너
-                        <span class="point">김세련</span>입니다.
-                     </h3>
-
+                     <div>
+                        <h2><span>안녕하세요!</span></h2>
+                        <h3>
+                           한계없이 앞으로 나아가는 웹디자이너
+                           <span class="point">김세련</span>입니다.
+                        </h3>
+                     </div>
                      <div class="right-info">
-                        <!-- Education -->
-                        <h4>EDUCATION</h4>
-                        <ul>
-                           <li>2019.02 - 예림디자인고등학교 웹디자인과 졸업</li>
-                           <li>
-                              2024.02 - 한양여자대학교 시각미디어디자인과 졸업
-                              예정
-                           </li>
-                           <li>
-                              2024.07 - MBC아카데미 웹디자인 퍼블리셔 과정 수료
-                           </li>
-                        </ul>
+                        <!-- Education Section -->
+                        <div class="EdLi_wrap">
+                           <div class="EdLi">
+                              <div>
+                                 <h4>EDUCATION</h4>
+                                 <ul>
+                                    <li>
+                                       2019.02 - 예림디자인고등학교 웹디자인과
+                                       졸업
+                                    </li>
+                                    <li>
+                                       2024.02 - 한양여자대학교 세라믹 디자인과
+                                       졸업
+                                    </li>
+                                    <li>
+                                       2024.07 - MBC아카데미 웹디자인&웹퍼블리셔
+                                       과정 수료
+                                    </li>
+                                 </ul>
 
-                        <!-- Award & Active -->
-                        <h4>AWARD & ACTIVE</h4>
-                        <ul>
-                           <li>2019.02 - 예림디자인고등학교 웹디자인과 졸업</li>
-                           <li>
-                              2024.02 - 한양여자대학교 시각미디어디자인과 졸업
-                              예정
-                           </li>
-                           <li>
-                              2024.07 - MBC아카데미 웹디자인 퍼블리셔 과정 수료
-                           </li>
-                        </ul>
+                                 <!-- License Section -->
+                                 <div class="license">
+                                    <h4>LICENSE</h4>
+                                    <ul>
+                                       <li>2019.02 - GTQ 2급</li>
+                                       <li>
+                                          2019.03 - 컴퓨터그래픽스운용기능사
+                                       </li>
+                                       <li>2020.03 - GTQ 1급</li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <!-- Award Section -->
+                              <div class="Award">
+                                 <h4>AWARD & ACTIVE</h4>
+                                 <ul>
+                                    <li>
+                                       2019.02 - 예림디자인고등학교 웹디자인과
+                                       졸업
+                                    </li>
+                                    <li>
+                                       2024.02 - 한양여자대학교 세라믹 디자인과
+                                       졸업
+                                    </li>
+                                    <li>
+                                       2024.02 - 한양여자대학교 세라믹 디자인과
+                                       졸업
+                                    </li>
+                                    <li>
+                                       2024.02 - 한양여자대학교 세라믹 디자인과
+                                       졸업
+                                    </li>
+                                    <li>
+                                       2024.02 - 한양여자대학교 세라믹 디자인과
+                                       졸업
+                                    </li>
+                                    <li>
+                                       2024.02 - 한양여자대학교 세라믹 디자인과
+                                       졸업
+                                    </li>
+                                    <li>
+                                       2024.02 - 한양여자대학교 세라믹 디자인과
+                                       졸업
+                                    </li>
+                                    <li>
+                                       2024.02 - 한양여자대학교 세라믹 디자인과
+                                       졸업
+                                    </li>
+                                    <li>
+                                       2024.02 - 한양여자대학교 세라믹 디자인과
+                                       졸업
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
 
-                        <!-- License -->
-                        <h4>LICENSE</h4>
-                        <ul>
-                           <li>2019.02 - GTQ 2급</li>
-                           <li>2019.03 - 컴퓨터그래픽스운용기능사</li>
-                           <li>2020.03 - GTQ 1급</li>
-                        </ul>
-
-                        <!-- Skills -->
-                        <h4>SKILLS</h4>
-                        <div class="skills">
-                           <img src="placeholder.png" alt="Photoshop" />
-                           <img src="placeholder.png" alt="Illustrator" />
-                           <img src="placeholder.png" alt="Adobe XD" />
-                           <img src="placeholder.png" alt="InDesign" />
-                           <img src="placeholder.png" alt="HTML" />
-                           <img src="placeholder.png" alt="CSS" />
-                           <img src="placeholder.png" alt="JavaScript" />
-                           <img src="placeholder.png" alt="PowerPoint" />
-                           <img src="placeholder.png" alt="Excel" />
+                        <!-- Skills Section -->
+                        <div class="skill">
+                           <h4>SKILLS</h4>
+                           <div class="skills">
+                              <div class="circle_icon">Ai</div>
+                              <div class="circle_icon">Ps</div>
+                              <div class="circle_icon">Ae</div>
+                              <div class="circle_icon">Id</div>
+                              <div class="circle_icon">html</div>
+                              <div class="circle_icon">css</div>
+                              <div class="circle_icon">js</div>
+                              <div class="circle_icon">pw</div>
+                              <div class="circle_icon">wd</div>
+                              <div class="circle_icon">AI</div>
+                              <div class="circle_icon">xl</div>
+                           </div>
                         </div>
                      </div>
                   </div>
