@@ -1,0 +1,413 @@
+@font-face {
+   font-family: "Molend";
+   src: url("../fonts/Molend-Regular.woff") format("woff");
+   font-weight: normal;
+   font-style: normal;
+}
+body {
+   overflow-x: hidden;
+   font-family: "Noto Sans KR", sans-serif;
+}
+
+/*Mobile==============================================================*/
+@media (max-width: 760px) {
+}
+
+/*tablet==============================================================*/
+@media (min-width: 760px) and (max-width: 1200px) {
+}
+
+/*PC==================================================================*/
+@media (min-width: 1200px) {
+   /*header*/
+   header {
+      width: 100%;
+      /* background-color: #ccc; */
+      /* box-shadow: 2px 2px 5px #222; */
+      position: fixed;
+      z-index: 999;
+   }
+
+   header ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+   }
+   header li {
+      width: calc(100% / 4);
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+   }
+   header a {
+      width: 100%;
+      height: 100%;
+      display: block;
+   }
+   header a:hover {
+      background-color: #222;
+      color: #ccc;
+   }
+
+   /*container*/
+   #container {
+      width: 100%;
+      /* position: fixed; */
+   }
+   section {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+   }
+   section h1 {
+      font: 100px "arial";
+      position: absolute;
+      left: 51.8%;
+      top: 65%;
+      transform: translate(-50%, -50%);
+   }
+
+   .page1 {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+   }
+   .page1::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("../img/tumblr_nej2ovpxcg1qz6f9yo1_500.webp");
+
+      object-fit: cover;
+
+      z-index: -1;
+   }
+   .page1 h1 {
+      width: 100%;
+      font-family: "Molend", sans-serif;
+      color: #fff;
+      font-size: 250px;
+      text-align: center;
+      line-height: 120px;
+   }
+   .page1 h1 img {
+      width: 200px;
+      position: relative;
+      left: 30px;
+      transform: scaleX(1.1);
+      margin-right: 60px;
+   }
+
+   .page1 p {
+      text-align: center;
+      position: relative;
+      top: 265px;
+      color: #fff;
+   }
+   .page1 p span {
+      font-size: 18px;
+   }
+   .port {
+      display: block;
+      transform: scaleX(1.1);
+   }
+   .folio {
+      position: relative;
+      top: -80px;
+   }
+   /*section 전체로 바꾸기*/
+   .wrap section:nth-child(1) {
+      background-image: url(../img/bg2.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+   }
+
+   /*page2*/
+   .page2 {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+   }
+   .pag2_wrap {
+      display: none;
+   }
+   .page2 ul {
+      width: 100%;
+      display: flex;
+   }
+   .pag2_wrap ul {
+      width: 35%;
+   }
+
+   .page2 p {
+      font-size: 25px;
+      margin-left: 20px;
+   }
+   .page2 li {
+      width: 100%;
+      display: flex;
+      align-items: center;
+   }
+
+   .txt .number img {
+      width: 25px;
+   }
+   .txt .number {
+      width: 130%;
+   }
+   /* or 270 */
+
+   .txt .number p {
+      font-size: 16px;
+   }
+   .txt .number li {
+      width: 100%;
+      position: relative;
+      left: -625px;
+      top: 320px;
+      display: flex;
+   }
+   .page2 .pro {
+      width: 1000px;
+      position: absolute;
+      bottom: -200px;
+      left: -200px;
+   }
+
+   .txt {
+      position: absolute;
+      right: 20px;
+      top: 50px;
+      z-index: 99;
+   }
+   .txt p {
+      width: 95%;
+      color: #222;
+   }
+   .txt span {
+      color: #001aff;
+   }
+   .txt li {
+      width: 100%;
+      display: inline-block;
+   }
+   .txt p {
+      font-size: 20px;
+      margin: 20px 5px;
+   }
+
+   .txt li img {
+      width: 630px;
+   }
+
+   .catch {
+      position: absolute;
+      bottom: 50px;
+      left: 42%;
+   }
+   .catch p:first-child {
+      font-size: 70px;
+   }
+
+   .colon {
+      width: 100%;
+   }
+   .colon img {
+      width: 120px;
+   }
+   .colon li:first-child {
+      margin-left: 60.5%;
+      margin-top: -7%;
+   }
+   .colon li:last-child {
+      transform: scaleX(-1) scaleY(-1);
+      margin-top: 10%;
+      margin-right: 2%;
+   }
+   .circle-container {
+      width: 7%;
+      margin-top: -350px;
+      margin-left: 50px;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   .border-circle {
+      width: 20px;
+      height: 20px;
+      border: 5px solid #001aff;
+      border-radius: 50%;
+      background-color: transparent;
+   }
+   /*-------*/
+
+   .profile-card {
+      width: 32%;
+      border-radius: 12px;
+      margin: 150px 150px;
+      text-align: center;
+   }
+
+   .profile-image {
+      position: relative;
+      margin-bottom: 23px;
+      margin: 0px auto;
+   }
+
+   .profile-image .circle {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background-color: #0052ff;
+      position: absolute;
+      top: 0px;
+      left: 50px;
+      z-index: -1;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+   }
+
+   .profile-image img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+   }
+   .profile-two {
+      position: relative;
+      top: -50px;
+   }
+   .name {
+      margin-right: 100px;
+      margin-top: -30px;
+   }
+   .name h3 {
+      letter-spacing: 2.9px;
+      color: #003ab8;
+   }
+   h3 .dot {
+      width: 20px;
+      height: 20px;
+      background-color: orange;
+      display: inline-block; /* width와 height 적용 */
+      border-radius: 50%; /* 원 모양 만들기 */
+   }
+   .name h2 {
+      font-size: 35px;
+      color: #003ab8;
+   }
+
+   .subtext {
+      font-size: 14px;
+      color: #003ab8;
+   }
+
+   /*----------*/
+   .profile_wrap {
+      display: flex;
+   }
+   .contact-info {
+      width: 100%;
+      display: block;
+      align-items: center;
+      justify-content: space-between;
+      margin: 30px 0px 40px;
+   }
+   .contact-info li p {
+      margin-left: 10px;
+   }
+   .contact-info img {
+      width: 30px;
+   }
+   .contact-info p {
+      font-size: 20px;
+   }
+
+   .contact-info > ul {
+      margin-bottom: 30px;
+   }
+
+   /*hashtags*/
+   .hashtags {
+      display: flex;
+      flex-direction: column;
+
+      gap: 10px;
+   }
+
+   .hashtag-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap; /* 가로 공간 부족 시 줄 바꿈 */
+   }
+
+   .hashtag-group p {
+      display: inline-block;
+      background-color: #ebe8f6;
+      color: #333;
+      border: 1px solid #ccc;
+      border-radius: 50px;
+      padding: 5px 10px;
+      margin: 0;
+      font-size: 20px;
+      text-align: center;
+      box-sizing: border-box;
+   }
+   /*왼쪽 소개*/
+
+   .right-txt {
+      margin-left: 15%;
+      margin-top: 1%;
+      z-index: 999;
+   }
+   .right-txt h2 {
+      font-size: 50px;
+   }
+   .right-txt h3 {
+      font-size: 30px;
+      margin: 0px;
+   }
+
+   .right-txt .point {
+      color: #003ab8;
+   }
+
+   /* 리스트 스타일 */
+   ul {
+      padding: 0;
+      margin: 0 0 20px;
+   }
+
+   .right-info li {
+      list-style: circle;
+
+      font-size: 14px;
+      margin: 8px 0;
+      line-height: 1.5;
+   }
+
+   /* Skills 이미지 영역 */
+   .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px; /* 이미지 간격 */
+   }
+
+   .skills img {
+      width: 40px; /* 임시 이미지 크기 */
+      height: 40px;
+      object-fit: contain;
+   }
+
+   /* --------------- */
+   .wrap section:nth-child(2) {
+      background-image: url(../img/bg2.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+   }
+}
