@@ -11,10 +11,2221 @@ body {
 
 /*Mobile==============================================================*/
 @media (max-width: 760px) {
+   /*header*/
+   header {
+      width: 100%;
+      /* background-color: #ccc; */
+      /* box-shadow: 2px 2px 5px #222; */
+      position: fixed;
+      z-index: 999;
+   }
+
+   header ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+   }
+   header li {
+      width: calc(100% / 4);
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+   }
+   header a {
+      width: 100%;
+      height: 100%;
+      display: block;
+   }
+   header a:hover {
+      background-color: #222;
+      color: #ccc;
+   }
+
+   /*container*/
+   #container {
+      width: 100%;
+      /* position: fixed; */
+   }
+   section {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+   }
+   section h1 {
+      font: 100px "arial";
+      position: absolute;
+      left: 51.8%;
+      top: 65%;
+      transform: translate(-50%, -50%);
+   }
+
+   .page1 {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+   }
+   .page1::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("../img/tumblr_nej2ovpxcg1qz6f9yo1_500.webp");
+
+      object-fit: cover;
+
+      z-index: -1;
+   }
+   .page1 h1 {
+      width: 100%;
+      font-family: "Molend", sans-serif;
+      color: #fff;
+      font-size: 150x;
+      text-align: center;
+      line-height: 120px;
+   }
+
+   /*시계 배경*/
+   .page1 h1 img {
+      width: 80px;
+      position: relative;
+      left: 30px;
+      transform: scaleX(1.2);
+      margin-right: 60px;
+   }
+
+   /* 시계 스타일 */
+   .clock_wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+   }
+
+   .clock {
+      position: relative;
+      height: 300px; /* 크기 줄임 */
+      width: 300px; /* 크기 줄임 */
+      left: 10%; /* 위치 조정 */
+      top: 50%; /* 위치 조정 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   .time {
+      position: absolute;
+      top: 20%;
+      opacity: 1;
+   }
+
+   /* 시계 중앙 점 */
+   #center {
+      width: 6px; /* 크기 줄임 */
+      height: 6px; /* 크기 줄임 */
+      background-color: #222;
+      border-radius: 50%;
+      z-index: 10;
+      margin-bottom: 10px;
+      margin-left: -10px;
+      /* opacity: 0; */
+   }
+
+   /* 시침 */
+   #hour {
+      position: absolute;
+      width: 3px; /* 크기 줄임 */
+      height: 25px; /* 크기 줄임 */
+      background-color: #222;
+      top: 59px;
+      left: -5px;
+      transform-origin: 50% 100%;
+      transform: rotate(0deg);
+      transition: transform 0.5s ease;
+      border-radius: 50px;
+   }
+
+   /* 분침 */
+   #min {
+      position: absolute;
+      width: 3px; /* 크기 줄임 */
+      height: 30px; /* 크기 줄임 */
+      background-color: #222;
+      top: 54px; /* 위치 조정 */
+      left: -6px;
+      transform-origin: 50% 100%;
+      transform: rotate(0deg);
+      transition: transform 0.5s ease;
+      border-radius: 50px;
+   }
+
+   /* 초침 */
+   #sec {
+      position: absolute;
+      width: 2px; /* 크기 줄임 */
+      height: 35px; /* 크기 줄임 */
+      background-color: red;
+      top: 49px; /* 위치 조정 */
+      left: -7px;
+      transform-origin: 50% 100%;
+      transform: rotate(0deg);
+      transition: transform 0.1s ease;
+      border-radius: 50px;
+   }
+
+   .page1 p {
+      text-align: center;
+      position: relative;
+      top: 320px;
+      color: #fff;
+   }
+   .page1 p span {
+      font-size: 18px;
+   }
+   .port {
+      display: block;
+      transform: scaleX(1.1);
+   }
+   .folio {
+      position: relative;
+      top: -80px;
+   }
+   /*section 전체로 바꾸기*/
+   .wrap section:nth-child(1) {
+      background-image: url(../img/bg2.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+   }
+
+   /*page2*/
+   .page2 {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+   }
+   /*어바웃 첫화면 보였다가 안보이기*/
+   .pag2_wrap {
+      /* display: block; */
+      display: none;
+   }
+   .page2 ul {
+      width: 100%;
+
+      display: flex;
+   }
+   .pag2_wrap ul {
+      width: 100%;
+   }
+
+   .page2 p {
+      font-size: 25px;
+   }
+   .page2 li {
+      width: 100%;
+      display: flex;
+      align-items: center;
+   }
+
+   .txt .number img {
+      width: 25px;
+   }
+   .number {
+      width: 100%;
+      position: absolute;
+      bottom: -50px;
+      left: 0px;
+   }
+   /* or 270 */
+
+   .txt .number p {
+      font-size: 16px;
+   }
+   .txt .number li {
+      width: 180px;
+
+      display: flex;
+   }
+   .page2 .pro {
+      width: 1000px;
+      margin-top: 100px;
+   }
+
+   .txt {
+      z-index: 99;
+      margin-top: 200px;
+      position: relative;
+   }
+   .txt p {
+      color: #222;
+   }
+   .txt span {
+      color: #001aff;
+   }
+   .txt li {
+      width: 100%;
+      display: inline-block;
+   }
+   .txt p {
+      font-size: 20px;
+      margin: 20px 10px;
+   }
+
+   .txt li img {
+      width: 485px;
+      margin: 0px auto;
+   }
+
+   .catch {
+      text-align: right;
+      position: absolute;
+      bottom: 365px;
+      right: 15px;
+   }
+   .catch p {
+      font-size: 15px;
+   }
+
+   /*colon_show_img*/
+   .colon_show {
+      width: 100%;
+   }
+   .colon_show img {
+      width: 50px;
+      opacity: 0; /*두번째에서 안보이도록*/
+   }
+
+   .colon_show li:first-child {
+      margin-left: 3%;
+      margin-top: 5%;
+   }
+   .colon_show li:nth-child(2) {
+      transform: scaleX(-1) scaleY(-1);
+      margin-top: 10%;
+      margin-right: -40%;
+   }
+
+   /*colon_hide_img*/
+   .colon_hide {
+      width: 100%;
+   }
+   .colon_hide img {
+      width: 120px;
+      opacity: 0; /*두번쨰에서 보이도록*/
+   }
+   .colon_hide li:nth-child(1) {
+      margin-left: -550px;
+      margin-top: -8%;
+   }
+   .colon_hide li:nth-child(2) {
+      transform: scaleX(-1) scaleY(-1);
+      margin-top: -9%;
+      margin-left: 80px;
+   }
+
+   .circle-container {
+      width: 7%;
+      margin-top: -350px;
+      margin-left: 50px;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   .border-circle {
+      width: 20px;
+      height: 20px;
+      border: 5px solid #001aff;
+      border-radius: 50%;
+      background-color: transparent;
+   }
+   /*---어바웃 두번 째!! 안보였다 보이기---*/
+   .profile_wrap {
+      /* display: none; */
+      display: block;
+   }
+
+   .profile-card {
+      width: 100%;
+      border-radius: 12px;
+      margin: 200px auto 0px;
+      text-align: center;
+      box-sizing: border-box;
+   }
+
+   .profile-image {
+      position: relative;
+   }
+
+   .profile-image .circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #0052ff;
+      position: absolute;
+      top: 0px;
+      left: 50px;
+      z-index: -1;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+   }
+
+   .profile-image img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+   }
+   .profile-two {
+      position: relative;
+      left: 50px;
+      top: -10px;
+   }
+
+   .name h3 {
+      letter-spacing: 2.5px;
+      color: #003ab8;
+   }
+   h3 .dot {
+      width: 20px;
+      height: 20px;
+      background-color: orange;
+      display: inline-block;
+      border-radius: 100%;
+   }
+   .name h2 {
+      font-size: 35px;
+      color: #003ab8;
+   }
+
+   .subtext {
+      font-size: 14px;
+      color: #003ab8;
+   }
+
+   /*----------*/
+
+   .contact-info {
+      width: 100%;
+      margin: 10px auto;
+   }
+   .contact-info ul:first-child li {
+      margin-left: 20px;
+   }
+   .sns {
+      padding-left: 40px;
+   }
+
+   .contact-info ul:last-child li {
+      margin-left: 20px;
+   }
+   .contact-info li p {
+      margin-left: 10px;
+   }
+   .contact-info img {
+      width: 30px;
+   }
+   .contact-info p {
+      font-size: 18px;
+   }
+
+   .contact-info > ul {
+      margin-bottom: 10px;
+   }
+
+   /*hashtags*/
+   .hashtags {
+      display: none;
+   }
+
+   /*왼쪽 소개*/
+
+   .right-txt {
+      margin-top: 20px;
+      z-index: 999;
+   }
+   .right-txt > div:first-child {
+      display: none;
+   }
+   .right-txt h2 {
+      font-size: 25px;
+      margin-left: 40px;
+   }
+   .right-txt h3 {
+      font-size: 15px;
+   }
+   .right-txt > div h3 {
+      width: 400px;
+      border-bottom: 3px solid #003ab8;
+      padding-bottom: 10px;
+      margin: 0px auto;
+   }
+
+   .right-txt .point {
+      color: #003ab8;
+   }
+
+   /* 리스트 스타일 */
+   .right-info {
+      width: 95%;
+      margin: 20px auto;
+   }
+
+   .right-info h4 {
+      color: #003ab8;
+   }
+   .right-info ul {
+      padding: 0;
+      display: block;
+      margin-bottom: -50px;
+   }
+
+   .right-info ul li {
+      list-style: circle;
+      display: block;
+      font-size: 14px;
+      margin: 8px 0;
+      line-height: 1.5;
+   }
+   .EdLi {
+      display: flex;
+   }
+
+   .EdLi > div:nth-child(2) {
+      margin-bottom: 50px;
+   }
+   .EdLi .license {
+      margin-top: 65px;
+   }
+   .Award {
+      margin-left: 50px;
+   }
+
+   /* Skills 컨테이너 */
+   .skills {
+      width: 250px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+   }
+
+   .skill {
+      position: relative;
+      top: -145px;
+   }
+   .skill h4 {
+      margin-bottom: 10px;
+   }
+   .circle_icon {
+      width: calc(100% / 5 - 8px);
+      height: 45px;
+      background-color: #003ab8;
+      border-radius: 100%;
+      text-align: center;
+      line-height: 45px;
+      color: white;
+      font-size: 12px;
+   }
+
+   /* -------page3--------------- */
+   .wrap section:nth-child(2) {
+      background-image: url(../img/bg2.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      overflow: hidden;
+   }
+   .page3 .project {
+      position: relative;
+      top: 70px;
+      left: 180px;
+   }
+   .page3 .project span {
+      color: #001aff;
+   }
+   /* page3 관련 스타일 */
+   .page3-container {
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      position: relative;
+   }
+   .page3-wrap {
+      padding: 20px auto;
+   }
+   .page3-text {
+      padding-bottom: 210px;
+   }
+   .page3-text .url {
+      text-align: center;
+      margin-top: 10px;
+   }
+   .page3-text h2 {
+      width: 100%;
+      font-size: 48px;
+      color: #222;
+      /* line-height: 50px; */
+   }
+   .page3-text .types {
+      color: #444;
+      font-size: 20px;
+      border: none;
+      margin-top: 50px;
+   }
+   .page3-text h2 span {
+      width: 100%;
+      display: inline-block;
+      font-size: 40px;
+      color: #001aff;
+      text-decoration: none;
+      border-bottom: 4px solid #001aff;
+
+      text-align: center;
+   }
+   .page3-text h2 span:last-child {
+      position: relative;
+      top: -20px;
+   }
+   .page3-text p {
+      width: 100%;
+      color: #555;
+      text-align: center;
+      font-size: 1.2rem;
+   }
+
+   .page3-buttons {
+      width: 100%;
+      margin: 20px 50px;
+   }
+
+   .page3-buttons button {
+      border: 2px solid #3700ff;
+      border-radius: 50px;
+      padding: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+   }
+
+   .page3-btn-primary,
+   .page3-btn-secondary {
+      background-color: #fff;
+      color: #001aff;
+      margin-right: 20px;
+   }
+   .page3-btn-primary i,
+   .page3-btn-secondary i {
+      margin-left: 5px;
+   }
+
+   .page3-image-container {
+      position: relative;
+      display: inline-block;
+   }
+
+   .page3-image-container img {
+      max-width: 100%;
+      height: auto;
+      position: relative;
+      z-index: 2;
+   }
+
+   .page3-shapes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+   }
+
+   .page3-circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.8;
+   }
+
+   .page3-circle.yellow {
+      width: 150px;
+      height: 150px;
+      background-color: #ffdf67;
+      top: 50px;
+      left: 360px;
+   }
+
+   .page3-circle.pink {
+      width: 100px;
+      height: 100px;
+      background-color: #ffb4b4;
+      top: 300px;
+      left: 50px;
+   }
+
+   .page3-circle.blue {
+      width: 120px;
+      height: 120px;
+      background-color: #e1e8f7;
+      top: -50px;
+      right: 50%;
+   }
+
+   .page3-half-circle {
+      display: none;
+   }
+
+   .page3-info-box {
+      width: 80%;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      background-color: #ffffff;
+      margin: 50px auto;
+   }
+
+   .page3-info-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      font-size: 14px;
+      color: #333;
+      border-bottom: 1px solid #ddd;
+      box-sizing: border-box;
+   }
+
+   .page3-info-list li:last-child {
+      border-bottom: none;
+   }
+
+   .page3-icons {
+      display: flex;
+      gap: 10px;
+   }
+
+   .page3-icon {
+      width: 60px;
+      height: 20px;
+      line-height: 20px;
+      background-color: #001aff;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+   }
+
+   /* -------page4--------------- */
+   .wrap section:nth-child(3) {
+      background-image: url(../img/bg2.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      overflow: hidden;
+   }
+
+   .page4 .project {
+      position: relative;
+      top: 70px;
+      left: 170px;
+   }
+   .page4 .project span {
+      color: #001aff;
+   }
+   /* page3 관련 스타일 */
+   .page4-container {
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      position: relative;
+      top: -25px;
+   }
+   .page4-wrap {
+      padding: 20px auto;
+   }
+   .page4-text {
+      padding-bottom: 210px;
+   }
+   .page4-text .url {
+      text-align: center;
+      margin-top: 10px;
+   }
+   .page4-text h2 {
+      width: 100%;
+      font-size: 48px;
+      color: #222;
+      /* line-height: 50px; */
+   }
+   .page4-text .types {
+      color: #444;
+      font-size: 20px;
+      border: none;
+      margin-top: 50px;
+   }
+   .page4-text h2 span {
+      width: 100%;
+      display: inline-block;
+      font-size: 40px;
+      color: #001aff;
+      text-decoration: none;
+      border-bottom: 4px solid #001aff;
+
+      text-align: center;
+   }
+   .page4-text h2 span:last-child {
+      position: relative;
+      top: -20px;
+   }
+   .page4-text p {
+      width: 100%;
+      color: #555;
+      text-align: center;
+      font-size: 1.2rem;
+   }
+
+   .page4-buttons {
+      width: 100%;
+      margin: 20px 50px;
+   }
+
+   .page4-buttons button {
+      border: 2px solid #3700ff;
+      border-radius: 50px;
+      padding: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+   }
+
+   .page4-btn-primary,
+   .page4-btn-secondary {
+      background-color: #fff;
+      color: #001aff;
+      margin-right: 20px;
+   }
+   .page4-btn-primary i,
+   .page4-btn-secondary i {
+      margin-left: 5px;
+   }
+
+   .page4-image-container {
+      position: relative;
+      display: inline-block;
+   }
+
+   .page4-image-container img {
+      max-width: 100%;
+      height: auto;
+      position: relative;
+      top: 500px;
+      z-index: 2;
+   }
+
+   .page4-shapes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+   }
+
+   .page4-circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.8;
+   }
+
+   .page4-circle.yellow {
+      width: 150px;
+      height: 150px;
+      background-color: #ffdf67;
+      top: 50px;
+      left: 360px;
+   }
+
+   .page4-circle.pink {
+      width: 100px;
+      height: 100px;
+      background-color: #ffb4b4;
+      top: 300px;
+      left: 50px;
+   }
+
+   .page4-circle.blue {
+      width: 120px;
+      height: 120px;
+      background-color: #e1e8f7;
+      top: -50px;
+      right: 50%;
+   }
+
+   .page4-half-circle {
+      display: none;
+   }
+
+   .page4-info-box {
+      width: 80%;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      background-color: #ffffff;
+      margin: 50px auto;
+   }
+
+   .page4-info-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      font-size: 14px;
+      color: #333;
+      border-bottom: 1px solid #ddd;
+      box-sizing: border-box;
+   }
+
+   .page4-info-list li:last-child {
+      border-bottom: none;
+   }
+
+   .page4-icons {
+      display: flex;
+      gap: 10px;
+   }
+
+   .page4-icon {
+      width: 60px;
+      height: 20px;
+      line-height: 20px;
+      background-color: #001aff;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+   }
+
+   /* page5-ceramic project */
+   *,
+   :after,
+   :before {
+      box-sizing: border-box;
+   }
+
+   :root {
+      --primary: #001aff;
+   }
+
+   .page5 .wrap {
+      height: 200vh;
+      background: #222;
+   }
+
+   .page5 {
+      position: relative;
+      height: 100vh;
+      font-size: 16px;
+      color: #777;
+      line-height: 1.8;
+      letter-spacing: -0.3px;
+   }
+
+   .page5 .ceramic-project {
+      position: relative;
+      height: 100vh;
+      font-size: 16px;
+      color: #777;
+      line-height: 2;
+      letter-spacing: -0.3px;
+      overflow: hidden;
+   }
+
+   .page5 .ceramic-project .tit_area {
+      position: relative;
+      max-width: 100%;
+      margin: 20px 10px;
+      padding-top: 10vh;
+   }
+
+   .page5 .ceramic-project .tit_area .tit {
+      font-size: 28px; /* 글씨 크기 줄임 */
+      color: #222;
+      font-weight: 700;
+      position: relative;
+      top: -60px;
+      left: 18px;
+   }
+
+   .page5 .ceramic-project .tit_area .tit span {
+      color: var(--primary);
+   }
+
+   .page5 .ceramic-project .tit_area .txt {
+      font-size: 14px; /* 글씨 크기 줄임 */
+      color: #777;
+      width: 150%;
+      margin-top: 40px;
+
+      z-index: 9999;
+   }
+
+   .page5 .ceramic-project .img_slide_wrap {
+      padding-bottom: 15px; /* padding 줄임 */
+   }
+
+   .page5 .ceramic-project ul {
+      display: flex;
+      flex-direction: column; /* 세로로 나열 */
+      justify-content: center; /* 가운데 정렬 */
+      padding-left: 0;
+      margin: 0;
+   }
+
+   .page5 .ceramic-project ul li {
+      transition: all 0.3s;
+      width: 100%;
+      margin-bottom: 30px;
+   }
+
+   .page5 .ceramic-project ul li + li {
+      margin-left: 0;
+   }
+
+   .page5 .ceramic-project ul li:nth-child(odd) a,
+   .page5 .ceramic-project ul li:nth-child(even) a {
+      width: 100%; /* 너비 줄임 */
+      height: 40vh; /* 높이 줄임 */
+   }
+
+   .page5 .ceramic-project ul li:hover {
+      transform: translate(0px, 0px); /* hover 효과 제거 */
+   }
+
+   .page5 .ceramic-project ul li a {
+      display: block;
+      position: relative;
+      box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.15); /* 그림자 효과 축소 */
+      transition: all 0.3s;
+   }
+
+   .page5 .ceramic-project ul li a:after {
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background: rgb(1, 1, 1);
+      background: linear-gradient(
+         0deg,
+         rgba(1, 1, 1, 0.5) 0%,
+         rgba(0, 0, 0, 0) 60%
+      );
+      transition: all 0.25s;
+   }
+
+   .page5 .ceramic-project ul li a:hover {
+      box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.2); /* 그림자 효과 줄임 */
+   }
+
+   .page5 .ceramic-project ul li .txt {
+      position: absolute;
+      bottom: 0;
+      z-index: 2;
+      width: 100%;
+      padding: 0 0 40px 25px; /* 패딩 줄임 */
+      font-size: 14px; /* 글씨 크기 줄임 */
+      font-weight: 500;
+      color: #fff;
+   }
+
+   .page5 .ceramic-project ul li .txt p {
+      margin-bottom: -20px;
+      padding-bottom: 10px; /* padding 줄임 */
+      font-size: 22px; /* 글씨 크기 줄임 */
+      font-weight: 700;
+   }
+
+   .page5 .ceramic-project ul li .txt div {
+      margin-top: 10px;
+   }
+
+   .page5 .ceramic-project ul li .txt {
+      width: 90%;
+      margin-top: 20%;
+      margin-right: 0;
+   }
+
+   .page5 .ceramic-project ul li img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+
+   .page5 .ceramic-project .bg {
+      position: absolute;
+      top: 120px;
+      width: 100%;
+      z-index: -1;
+   }
+
+   .page5 .ceramic-project .bg .flow_txt {
+      position: relative;
+      z-index: -1;
+      opacity: 0.1; /* 흐림 효과 강도 줄임 */
+      font-size: 80px; /* 더 작은 화면에서 글씨 크기 줄임 */
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 0.65;
+      white-space: nowrap;
+      animation: flow 30s linear infinite;
+   }
+
+   @keyframes flow {
+      from {
+         transform: translateX(0);
+      }
+      to {
+         transform: translateX(-50%);
+      }
+   }
 }
 
 /*tablet==============================================================*/
 @media (min-width: 760px) and (max-width: 1200px) {
+   /*header*/
+   header {
+      width: 100%;
+
+      position: fixed;
+      z-index: 999;
+   }
+
+   header ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+   }
+   header li {
+      width: calc(100% / 4);
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+   }
+   header a {
+      width: 100%;
+      height: 100%;
+      display: block;
+   }
+   header a:hover {
+      background-color: #222;
+      color: #ccc;
+   }
+
+   /*container*/
+   #container {
+      width: 100%;
+      /* position: fixed; */
+   }
+   section {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+   }
+   section h1 {
+      font: 100px "arial";
+      position: absolute;
+      left: 51.8%;
+      top: 65%;
+      transform: translate(-50%, -50%);
+   }
+
+   .page1 {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+   }
+   .page1::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("../img/tumblr_nej2ovpxcg1qz6f9yo1_500.webp");
+
+      object-fit: cover;
+
+      z-index: -1;
+   }
+   .page1 h1 {
+      width: 100%;
+      font-family: "Molend", sans-serif;
+      color: #fff;
+      font-size: 150px;
+      text-align: center;
+      line-height: 120px;
+   }
+
+   /*시계 배경*/
+   .page1 h1 img {
+      width: 125px;
+      position: relative;
+      left: 30px;
+      transform: scaleX(1.2);
+      margin-right: 60px;
+   }
+
+   /* 시계 스타일 */
+   .clock_wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+   }
+
+   .clock {
+      position: relative;
+      height: 300px; /* 크기 줄임 */
+      width: 300px; /* 크기 줄임 */
+      left: 36.5%; /* 위치 조정 */
+      top: 51%; /* 위치 조정 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   .time {
+      position: absolute;
+      top: 20%;
+      opacity: 1;
+   }
+
+   /* 시계 중앙 점 */
+   #center {
+      width: 10px; /* 크기 줄임 */
+      height: 10px; /* 크기 줄임 */
+      background-color: #222;
+      border-radius: 50%;
+      z-index: 10;
+      margin-bottom: 20px;
+      margin-left: -240px;
+      /* opacity: 0; */
+   }
+
+   /* 시침 */
+   #hour {
+      position: absolute;
+      width: 5px; /* 크기 줄임 */
+      height: 35px; /* 크기 줄임 */
+      background-color: #222;
+      top: 45px;
+      left: -120px;
+      transform-origin: 50% 100%;
+      transform: rotate(0deg);
+      transition: transform 0.5s ease;
+      border-radius: 50px;
+   }
+
+   /* 분침 */
+   #min {
+      position: absolute;
+      width: 6px; /* 크기 줄임 */
+      height: 50px; /* 크기 줄임 */
+      background-color: #222;
+      top: 30px; /* 위치 조정 */
+      left: -123px;
+      transform-origin: 50% 100%;
+      transform: rotate(0deg);
+      transition: transform 0.5s ease;
+      border-radius: 50px;
+   }
+
+   /* 초침 */
+   #sec {
+      position: absolute;
+      width: 4px; /* 크기 줄임 */
+      height: 55px; /* 크기 줄임 */
+      background-color: red;
+      top: 25px; /* 위치 조정 */
+      left: -125px;
+      transform-origin: 50% 100%;
+      transform: rotate(0deg);
+      transition: transform 0.1s ease;
+      border-radius: 50px;
+   }
+
+   .page1 p {
+      text-align: center;
+      position: relative;
+      top: 265px;
+      color: #fff;
+   }
+   .page1 p span {
+      font-size: 18px;
+   }
+   .port {
+      display: block;
+      transform: scaleX(1.1);
+   }
+   .folio {
+      position: relative;
+      top: -80px;
+   }
+   /*section 전체로 바꾸기*/
+   .wrap section {
+      background-image: url(../img/bg2.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+   }
+
+   /*page2*/
+   .page2 {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+   }
+   /*어바웃 첫화면 보였다가 안보이기*/
+   .pag2_wrap {
+      display: none;
+      /* display: block; */
+   }
+
+   .page2 ul {
+      width: 100%;
+      display: flex;
+   }
+   .pag2_wrap ul {
+      width: 80%;
+   }
+
+   .page2 p {
+      font-size: 25px;
+      /* margin-left: 20px; */
+   }
+   .page2 li {
+      width: 100%;
+      display: flex;
+      align-items: center;
+   }
+
+   .txt .number img {
+      width: 30px;
+   }
+   .txt .number {
+      width: 120%;
+   }
+   /* or 270 */
+
+   .txt .number p {
+      font-size: 16px;
+   }
+   .txt .number li {
+      width: 50%;
+      position: relative;
+      left: -600px;
+      top: 330px;
+      display: flex;
+   }
+   .page2 .pro {
+      width: 120%;
+      position: relative;
+      bottom: 50px;
+   }
+
+   .txt {
+      margin: 150px auto;
+      position: relative;
+   }
+   .txt p {
+      width: 100%;
+      color: #222;
+   }
+   .txt span {
+      color: #001aff;
+   }
+   .txt li {
+      width: 100%;
+      display: inline-block;
+   }
+   .txt p {
+      font-size: 20px;
+      margin: 20px 5px;
+   }
+
+   .txt li img {
+      width: 650px;
+      position: relative;
+   }
+
+   .catch {
+      text-align: right;
+      position: absolute;
+      bottom: 35%;
+      right: 10px;
+      line-height: 55px;
+   }
+   .catch p:first-child {
+      font-size: 50px;
+   }
+   /*colon_show_img*/
+   .colon_show {
+      width: 100%;
+   }
+   .colon_show img {
+      width: 90px;
+      opacity: 1;
+   }
+
+   .colon_show li:first-child {
+      margin-left: 20px;
+      margin-top: 10%;
+   }
+   .colon_show li:nth-child(2) {
+      transform: scaleX(-1) scaleY(-1);
+      margin-top: 10%;
+      margin-right: -45%;
+   }
+
+   /*colon_hide_img*/
+   .colon_hide {
+      width: 100%;
+   }
+   .colon_hide img {
+      width: 120px;
+      opacity: 0;
+   }
+   .colon_hide li:nth-child(1) {
+      margin-left: -550px;
+      margin-top: -8%;
+   }
+   .colon_hide li:nth-child(2) {
+      transform: scaleX(-1) scaleY(-1);
+      margin-top: -9%;
+      margin-left: 80px;
+   }
+
+   .circle-container {
+      width: 7%;
+      margin-top: -350px;
+      margin-left: 50px;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   .border-circle {
+      width: 20px;
+      height: 20px;
+      border: 5px solid #001aff;
+      border-radius: 50%;
+      background-color: transparent;
+   }
+   /*---어바웃 두번 째 안보였다 보이기---*/
+   .profile_wrap {
+      /* display: none; */
+      display: block;
+   }
+
+   .profile-card {
+      width: 100%;
+      border-radius: 12px;
+      margin: 170px auto 0px;
+      text-align: center;
+      box-sizing: border-box;
+   }
+
+   .profile-image {
+      position: relative;
+   }
+
+   .profile-image .circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: #0052ff;
+      position: absolute;
+      top: 0px;
+      left: 50%;
+      z-index: -1;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+   }
+
+   .profile-image img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+   }
+   .profile-two {
+      position: relative;
+      right: 5%;
+   }
+
+   .name h3 {
+      letter-spacing: 2.5px;
+      color: #003ab8;
+   }
+   h3 .dot {
+      width: 20px;
+      height: 20px;
+      background-color: orange;
+      display: inline-block;
+      border-radius: 100%;
+   }
+   .name h2 {
+      font-size: 35px;
+      color: #003ab8;
+   }
+
+   .subtext {
+      font-size: 14px;
+      color: #003ab8;
+   }
+
+   /*-----contact-info----*/
+
+   .contact-info {
+      width: 80%;
+      margin: 10px 130px;
+   }
+   .contact-info ul:first-child li {
+      margin-left: 20px;
+   }
+   /* .sns {
+        padding-left: 0px;
+    } */
+
+   .contact-info ul:last-child li {
+      margin-left: 20px;
+   }
+   .contact-info li p {
+      margin-left: 10px;
+   }
+   .contact-info img {
+      width: 30px;
+   }
+   .contact-info p {
+      font-size: 18px;
+   }
+
+   .contact-info > ul {
+      margin-bottom: 10px;
+   }
+
+   /*hashtags*/
+   .hashtags {
+      display: flex;
+      flex-direction: column;
+
+      gap: 10px;
+   }
+
+   .hashtag-group {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap; /* 가로 공간 부족 시 줄 바꿈 */
+   }
+
+   .hashtag-group p {
+      display: inline-block;
+      background-color: #ebe8f6;
+      color: #333;
+      border: 1px solid #ccc;
+      border-radius: 50px;
+      padding: 5px 10px;
+      margin: 0;
+      font-size: 15px;
+      text-align: center;
+      box-sizing: border-box;
+   }
+
+   /*왼쪽 소개*/
+
+   .right-txt {
+      margin-top: 10px;
+      z-index: 999;
+   }
+   .right-txt > div:first-child {
+      display: block;
+   }
+   .right-txt h2 {
+      text-align: center;
+   }
+   .right-txt h3 {
+      font-size: 15px;
+      text-align: center;
+   }
+   .right-txt > div h3 {
+      width: 400px;
+      border-bottom: 3px solid #003ab8;
+      padding-bottom: 10px;
+      margin: 0px auto;
+   }
+
+   .right-txt .point {
+      color: #003ab8;
+   }
+
+   /* 리스트 스타일 */
+   .right-info {
+      width: 95%;
+      margin: 20px auto;
+   }
+
+   .right-info h4 {
+      color: #003ab8;
+   }
+   .right-info ul {
+      padding: 0;
+      display: block;
+      margin-bottom: -50px;
+   }
+
+   .right-info ul li {
+      list-style: circle;
+      display: block;
+      font-size: 14px;
+      margin: 8px 0;
+      line-height: 1.5;
+   }
+   .EdLi {
+      display: flex;
+   }
+
+   .EdLi > div:nth-child(2) {
+      margin-bottom: 50px;
+   }
+   .EdLi .license {
+      margin-top: 65px;
+   }
+   .Award {
+      margin-left: 90px;
+   }
+
+   /* Skills 컨테이너 */
+   .skills {
+      width: 100%;
+
+      display: flex;
+      gap: 8px;
+   }
+
+   .skill h4 {
+      margin-bottom: 10px;
+   }
+   .circle_icon {
+      width: 100%;
+      height: 55px;
+      background-color: #003ab8;
+      border-radius: 100%;
+      text-align: center;
+      line-height: 55px;
+      color: white;
+      font-size: 12px;
+   }
+
+   /* --------------- */
+   .wrap section:nth-child(2) {
+      background-image: url(../img/bg2.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      overflow: hidden;
+   }
+
+   .page3 .project {
+      position: relative;
+      top: 70px;
+      left: 42%;
+   }
+   .page3 .project span {
+      color: #001aff;
+   }
+   /* page3 관련 스타일 */
+   .page3-container {
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      position: relative;
+   }
+   .page3-wrap {
+      padding: 20px auto;
+   }
+   .page3-text {
+      padding-bottom: 210px;
+   }
+   .page3-text .url {
+      text-align: center;
+      margin-top: 10px;
+   }
+   .page3-text h2 {
+      width: 100%;
+      font-size: 48px;
+      color: #222;
+      /* line-height: 50px; */
+   }
+   .page3-text .types {
+      color: #444;
+      font-size: 20px;
+      border: none;
+      margin-top: 50px;
+   }
+   .page3-text h2 span {
+      width: 100%;
+      display: inline-block;
+      font-size: 40px;
+      color: #001aff;
+      text-decoration: none;
+      border-bottom: 4px solid #001aff;
+
+      text-align: center;
+   }
+   .page3-text h2 span:last-child {
+      position: relative;
+      top: -20px;
+   }
+   .page3-text p {
+      width: 100%;
+      color: #555;
+      text-align: center;
+      font-size: 1.2rem;
+   }
+
+   .page3-buttons {
+      width: 100%;
+      margin: 20px 25%;
+   }
+
+   .page3-buttons button {
+      border: 2px solid #3700ff;
+      border-radius: 50px;
+      padding: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+   }
+
+   .page3-btn-primary,
+   .page3-btn-secondary {
+      background-color: #fff;
+      color: #001aff;
+      margin-right: 20px;
+   }
+   .page3-btn-primary i,
+   .page3-btn-secondary i {
+      margin-left: 5px;
+   }
+
+   .page3-image-container {
+      position: relative;
+      left: 5%;
+      display: inline-block;
+   }
+
+   .page3-image-container img {
+      max-width: 100%;
+      height: auto;
+      position: relative;
+      z-index: 2;
+   }
+   .page3-shapes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+   }
+
+   .page3-circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.8;
+   }
+
+   .page3-circle.yellow {
+      width: 150px;
+      height: 150px;
+      background-color: #ffdf67;
+      top: 150px;
+      left: 360px;
+   }
+
+   .page3-circle.pink {
+      width: 100px;
+      height: 100px;
+      background-color: #ffb4b4;
+      top: 300px;
+      left: 50px;
+   }
+
+   .page3-circle.blue {
+      width: 120px;
+      height: 120px;
+      background-color: #e1e8f7;
+      top: -50px;
+      right: 50%;
+   }
+
+   .page3-half-circle {
+      width: 800px;
+      height: 800px;
+      position: absolute;
+      bottom: -50%;
+      right: -20px;
+      background-color: #001aff;
+      border-radius: 50%;
+      z-index: 1;
+   }
+
+   .page3-info-box {
+      width: 70%;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      background-color: #ffffff;
+      position: relative;
+      left: 13%;
+      top: -750px;
+   }
+
+   .page3-info-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      font-size: 14px;
+      color: #333;
+      border-bottom: 1px solid #ddd;
+      box-sizing: border-box;
+   }
+
+   .page3-info-list li:last-child {
+      border-bottom: none;
+   }
+
+   .page3-icons {
+      display: flex;
+      gap: 10px;
+   }
+
+   .page3-icon {
+      width: 60px;
+      height: 20px;
+      line-height: 20px;
+      background-color: #001aff;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+   }
+
+   /* page4 관련 스타일 */
+   .page4 {
+      overflow: hidden;
+   }
+   .page4 .project {
+      position: relative;
+      top: 60px;
+      left: 41%;
+   }
+
+   .page4 .project span {
+      color: #001aff;
+   }
+
+   /* page4 관련 스타일 */
+   .page4-container {
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      position: relative;
+   }
+
+   .page4-wrap {
+      padding: 20px auto;
+   }
+
+   .page4-text {
+      position: relative;
+      top: -530px;
+   }
+
+   .page4-text .url {
+      text-align: center;
+      margin-top: 10px;
+   }
+
+   .page4-text h2 {
+      width: 100%;
+      font-size: 48px;
+      color: #222;
+      /* line-height: 50px; */
+   }
+
+   .page4-text .types {
+      color: #444;
+      font-size: 20px;
+      border: none;
+      margin-top: 50px;
+   }
+
+   .page4-text h2 span {
+      width: 100%;
+      display: inline-block;
+      font-size: 40px;
+      color: #001aff;
+      text-decoration: none;
+      border-bottom: 4px solid #001aff;
+      text-align: center;
+   }
+
+   .page4-text h2 span:last-child {
+      position: relative;
+      top: -20px;
+   }
+
+   .page4-text p {
+      width: 100%;
+      color: #555;
+      text-align: center;
+      font-size: 1.2rem;
+   }
+
+   .page4-buttons {
+      width: 100%;
+      margin: 20px 25%;
+   }
+
+   .page4-buttons button {
+      border: 2px solid #3700ff;
+      border-radius: 50px;
+      padding: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+   }
+
+   .page4-btn-primary,
+   .page4-btn-secondary {
+      background-color: #fff;
+      color: #001aff;
+      margin-right: 20px;
+   }
+
+   .page4-btn-primary i,
+   .page4-btn-secondary i {
+      margin-left: 5px;
+   }
+
+   .page4-image-container {
+      position: relative;
+      display: inline-block;
+   }
+
+   .page4-image-container img {
+      max-width: 100%;
+      height: auto;
+      position: relative;
+      bottom: -540px;
+      left: 5%;
+      z-index: 2;
+   }
+
+   .page4-shapes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+   }
+
+   .page4-circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.8;
+   }
+
+   .page4-circle.yellow {
+      width: 150px;
+      height: 150px;
+      background-color: #ffdf67;
+      top: 150px;
+      left: 360px;
+   }
+
+   .page4-circle.pink {
+      width: 100px;
+      height: 100px;
+      background-color: #ffb4b4;
+      top: 300px;
+      left: 50px;
+   }
+
+   .page4-circle.blue {
+      width: 120px;
+      height: 120px;
+      background-color: #e1e8f7;
+      top: -50px;
+      right: 50%;
+   }
+
+   .page4-half-circle {
+      width: 800px;
+      height: 800px;
+      position: absolute;
+      bottom: -50%;
+      right: -20px;
+      background-color: #001aff;
+      border-radius: 50%;
+      z-index: 1;
+   }
+
+   .page4-info-box {
+      width: 70%;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      background-color: #ffffff;
+      position: relative;
+      left: 13%;
+      top: -550px;
+   }
+
+   .page4-info-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      font-size: 14px;
+      color: #333;
+      border-bottom: 1px solid #ddd;
+      box-sizing: border-box;
+   }
+
+   .page4-info-list li:last-child {
+      border-bottom: none;
+   }
+
+   .page4-icons {
+      display: flex;
+      gap: 10px;
+   }
+
+   .page4-icon {
+      width: 60px;
+      height: 20px;
+      line-height: 20px;
+      background-color: #001aff;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+   }
+
+   /* page5-ceramic project */
+   *,
+   :after,
+   :before {
+      box-sizing: border-box;
+   }
+
+   :root {
+      --primary: #001aff;
+   }
+
+   .page5 .wrap {
+      height: 200vh;
+      background: #222;
+   }
+
+   .page5 {
+      position: relative;
+      height: 100vh;
+      font-size: 16px;
+      color: #777;
+      line-height: 1.8;
+      letter-spacing: -0.3px;
+   }
+
+   .page5 .ceramic-project {
+      position: relative;
+      height: 100vh;
+      font-size: 16px;
+      color: #777;
+      line-height: 2;
+      letter-spacing: -0.3px;
+      overflow: hidden;
+   }
+
+   .page5 .ceramic-project .tit_area {
+      position: relative;
+      max-width: 100%;
+      margin: 20px 10px;
+      padding-top: 10vh;
+   }
+
+   .page5 .ceramic-project .tit_area .tit {
+      font-size: 28px; /* 글씨 크기 줄임 */
+      color: #222;
+      font-weight: 700;
+      position: relative;
+      top: -60px;
+      left: 18px;
+   }
+
+   .page5 .ceramic-project .tit_area .tit span {
+      color: var(--primary);
+   }
+
+   .page5 .ceramic-project .tit_area .txt {
+      font-size: 14px; /* 글씨 크기 줄임 */
+      color: #777;
+      width: 150%;
+      margin-top: 40px;
+      margin-bottom: 50px;
+      z-index: 9999;
+   }
+
+   .page5 .ceramic-project .img_slide_wrap {
+      padding-bottom: 15px; /* padding 줄임 */
+   }
+
+   .page5 .ceramic-project ul {
+      display: flex;
+      flex-direction: column; /* 세로로 나열 */
+      justify-content: center; /* 가운데 정렬 */
+      padding-left: 0;
+      margin: 0;
+   }
+
+   .page5 .ceramic-project ul li {
+      transition: all 0.3s;
+      width: 100%;
+      margin-bottom: 30px;
+   }
+
+   .page5 .ceramic-project ul li + li {
+      margin-left: 0;
+   }
+
+   .page5 .ceramic-project ul li:nth-child(odd) a,
+   .page5 .ceramic-project ul li:nth-child(even) a {
+      width: 100%; /* 너비 줄임 */
+      height: 40vh; /* 높이 줄임 */
+   }
+
+   .page5 .ceramic-project ul li:hover {
+      transform: translate(0px, 0px); /* hover 효과 제거 */
+   }
+
+   .page5 .ceramic-project ul li a {
+      display: block;
+      position: relative;
+      box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.15); /* 그림자 효과 축소 */
+      transition: all 0.3s;
+   }
+
+   .page5 .ceramic-project ul li a:after {
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background: rgb(1, 1, 1);
+      background: linear-gradient(
+         0deg,
+         rgba(1, 1, 1, 0.5) 0%,
+         rgba(0, 0, 0, 0) 60%
+      );
+      transition: all 0.25s;
+   }
+
+   .page5 .ceramic-project ul li a:hover {
+      box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.2); /* 그림자 효과 줄임 */
+   }
+
+   .page5 .ceramic-project ul li .txt {
+      position: absolute;
+      bottom: 0;
+      z-index: 2;
+      width: 100%;
+      padding: 0 0 40px 25px; /* 패딩 줄임 */
+      font-size: 14px; /* 글씨 크기 줄임 */
+      font-weight: 500;
+      color: #fff;
+   }
+
+   .page5 .ceramic-project ul li .txt p {
+      margin-bottom: -20px;
+      padding-bottom: 10px; /* padding 줄임 */
+      font-size: 22px; /* 글씨 크기 줄임 */
+      font-weight: 700;
+   }
+
+   .page5 .ceramic-project ul li .txt div {
+      margin-top: 10px;
+   }
+
+   .page5 .ceramic-project ul li .txt {
+      width: 90%;
+      margin-top: 20%;
+      margin-right: 0;
+   }
+
+   .page5 .ceramic-project ul li img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+
+   .page5 .ceramic-project .bg {
+      position: absolute;
+      top: 120px;
+      width: 100%;
+      z-index: -1;
+   }
+
+   .page5 .ceramic-project .bg .flow_txt {
+      position: relative;
+      z-index: -1;
+      opacity: 0.1; /* 흐림 효과 강도 줄임 */
+      font-size: 80px; /* 더 작은 화면에서 글씨 크기 줄임 */
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 0.65;
+      white-space: nowrap;
+      animation: flow 30s linear infinite;
+   }
+
+   @keyframes flow {
+      from {
+         transform: translateX(0);
+      }
+      to {
+         transform: translateX(-50%);
+      }
+   }
 }
 
 /*PC==================================================================*/
@@ -143,10 +2354,10 @@ body {
    #hour {
       position: absolute;
       width: 6px; /* 크기 줄임 */
-      height: 46px; /* 크기 줄임 */
+      height: 60px; /* 크기 줄임 */
       background-color: #222;
-      top: 48px;
-      left: -3px;
+      top: 28px;
+      left: -10px;
       transform-origin: 50% 100%;
       transform: rotate(0deg);
       transition: transform 0.5s ease;
@@ -157,10 +2368,10 @@ body {
    #min {
       position: absolute;
       width: 6px; /* 크기 줄임 */
-      height: 60px; /* 크기 줄임 */
+      height: 65px; /* 크기 줄임 */
       background-color: #222;
-      top: 30px; /* 위치 조정 */
-      left: -2px;
+      top: 25px; /* 위치 조정 */
+      left: -6px;
       transform-origin: 50% 100%;
       transform: rotate(0deg);
       transition: transform 0.5s ease;
@@ -173,7 +2384,8 @@ body {
       width: 4px; /* 크기 줄임 */
       height: 75px; /* 크기 줄임 */
       background-color: red;
-      top: 19px; /* 위치 조정 */
+      top: 15px; /* 위치 조정 */
+      left: -5px;
       transform-origin: 50% 100%;
       transform: rotate(0deg);
       transition: transform 0.1s ease;
@@ -198,7 +2410,7 @@ body {
       top: -80px;
    }
    /*section 전체로 바꾸기*/
-   .wrap section:nth-child(1) {
+   .wrap section {
       background-image: url(../img/bg2.svg);
       background-repeat: no-repeat;
       background-position: center;
@@ -548,5 +2760,571 @@ body {
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
+      overflow: hidden;
+   }
+   .page3 .project {
+      /* font-size: 52px; */
+      position: relative;
+      top: 55px;
+      left: 14%;
+   }
+   .page3 .project span {
+      color: #001aff;
+   }
+   /* page3 관련 스타일 */
+   .page3-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px;
+      position: relative;
+   }
+   .page3-wrap {
+      padding: 50px 105px;
+   }
+
+   .page3-text h2 {
+      width: 500px;
+      font-size: 48px;
+      color: #222;
+      margin: 0;
+   }
+   .page3-text .types {
+      color: #444;
+      font-size: 40px;
+      border: none;
+   }
+   .page3-text h2 span {
+      display: inline-block; /* 보더 바텀 길이 조절을 위해 추가 */
+      font-size: 95px;
+      color: #001aff;
+      text-decoration: none;
+      border-bottom: 4px solid #001aff;
+      line-height: 55px;
+      width: 492px; /* 보더 바텀의 길이 지정 */
+      text-align: center;
+      padding-bottom: 30px;
+   }
+
+   .page3-text p {
+      width: 39%;
+      margin: 50px 5px;
+      color: #555;
+      font-size: 1.2rem;
+   }
+   .page3-text u {
+      font-size: 4.7rem;
+   }
+
+   .page3-buttons {
+      margin-top: 20px;
+   }
+
+   .page3-buttons button {
+      border: 2px solid #3700ff;
+      border-radius: 50px;
+      padding: 10px 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+   }
+
+   .page3-btn-primary,
+   .page3-btn-secondary {
+      background-color: #fff;
+      color: #001aff;
+      margin-right: 10px;
+   }
+   .page3-btn-primary i,
+   .page3-btn-secondary i {
+      margin-left: 5px;
+   }
+
+   .page3-image-container {
+      position: relative;
+      display: inline-block;
+   }
+
+   .page3-image-container img {
+      max-width: 700px;
+      height: auto;
+      position: relative;
+      z-index: 2;
+   }
+
+   .page3-shapes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+   }
+
+   .page3-circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.8;
+   }
+
+   .page3-circle.yellow {
+      width: 150px;
+      height: 150px;
+      background-color: #ffdf67;
+      top: 50px;
+      left: 360px;
+   }
+
+   .page3-circle.pink {
+      width: 100px;
+      height: 100px;
+      background-color: #ffb4b4;
+      top: 300px;
+      left: 50px;
+   }
+
+   .page3-circle.blue {
+      width: 120px;
+      height: 120px;
+      background-color: #e1e8f7;
+      top: -50px;
+      right: 50%;
+   }
+
+   .page3-half-circle {
+      position: absolute;
+      top: 0px;
+      right: -550px;
+      width: 1200px;
+      height: 1200px;
+      background-color: #001aff;
+      border-radius: 50%;
+      z-index: 1;
+   }
+
+   .page3-info-box {
+      width: 29%;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      background-color: #ffffff;
+      margin-left: 50px;
+      margin-top: 10px;
+   }
+
+   .page3-info-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      font-size: 14px;
+      color: #333;
+      border-bottom: 1px solid #ddd;
+      box-sizing: border-box;
+   }
+
+   .page3-info-list li:last-child {
+      border-bottom: none;
+   }
+
+   .page3-icons {
+      display: flex;
+      gap: 10px;
+   }
+
+   .page3-icon {
+      width: 60px;
+      height: 20px;
+      line-height: 20px;
+      background-color: #001aff;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+   }
+
+   /*page4 - graphic project*/
+   .page4 .project {
+      position: relative;
+      top: 55px;
+      left: 40%;
+   }
+   .page4 .project span {
+      color: #001aff;
+   }
+
+   /* page4 관련 스타일 */
+   #page4 {
+      overflow: hidden;
+   }
+   .page4-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px;
+      position: relative;
+      left: -50px;
+   }
+   .page4-wrap {
+      padding: 50px 105px;
+      margin-left: 57.5%;
+   }
+
+   .page4-text h2 {
+      width: 500px;
+      font-size: 48px;
+      color: #222;
+      margin: 0;
+   }
+   .page4-text .types {
+      color: #444;
+      font-size: 40px;
+      border: none;
+   }
+   .page4-text h2 span {
+      display: inline-block;
+      font-size: 95px;
+      color: #001aff;
+      border-bottom: 4px solid #001aff;
+      line-height: 55px;
+      width: 492px;
+      text-align: center;
+      padding-bottom: 30px;
+   }
+
+   .page4-text p {
+      width: 100%;
+      margin: 50px -10px;
+      color: #555;
+      font-size: 1.2rem;
+      text-align: end;
+   }
+   .page4-text .url {
+      margin-left: 29%;
+   }
+   .page4-buttons {
+      margin-top: 20px;
+   }
+
+   .page4-buttons button {
+      border: 2px solid #3700ff;
+      border-radius: 50px;
+      padding: 10px 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+   }
+
+   .page4-btn-primary,
+   .page4-btn-secondary {
+      background-color: #fff;
+      color: #001aff;
+      margin-right: 10px;
+   }
+   .page4-btn-primary i,
+   .page4-btn-secondary i {
+      margin-left: 5px;
+   }
+
+   .page4-image-container {
+      position: relative;
+      display: inline-block;
+      left: -200%;
+   }
+
+   .page4-image-container img {
+      max-width: 400px;
+      height: auto;
+      position: relative;
+      z-index: 2;
+   }
+
+   .page4-shapes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+   }
+
+   .page4-circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.8;
+      transform: scaleX(-1); /* 좌우 반전 */
+   }
+
+   .page4-circle.yellow {
+      width: 150px;
+      height: 150px;
+      background-color: #ffdf67;
+      top: 50px;
+      right: 360px; /* 반전된 위치 */
+   }
+
+   .page4-circle.pink {
+      width: 100px;
+      height: 100px;
+      background-color: #ffb4b4;
+      top: 300px;
+      right: 50px; /* 반전된 위치 */
+   }
+
+   .page4-circle.blue {
+      width: 120px;
+      height: 120px;
+      background-color: #e1e8f7;
+      top: -50px;
+      left: 50%; /* 반전된 위치 */
+   }
+
+   .page4-half-circle {
+      position: absolute;
+      top: 0px;
+      left: -550px;
+      width: 1200px;
+      height: 1200px;
+      background-color: #001aff;
+      border-radius: 50%;
+      z-index: -1;
+   }
+
+   .page4-info-box {
+      width: 82%;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      background-color: #ffffff;
+      margin-left: 50px;
+      margin-top: 10px;
+   }
+
+   .page4-info-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      font-size: 14px;
+      color: #333;
+      border-bottom: 1px solid #ddd;
+      box-sizing: border-box;
+   }
+
+   .page4-info-list li:last-child {
+      border-bottom: none;
+   }
+
+   .page4-icons {
+      display: flex;
+      gap: 10px;
+   }
+
+   .page4-icon {
+      width: 60px;
+      height: 20px;
+      line-height: 20px;
+      background-color: #001aff;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+   }
+
+   /*page5-ceramic project*/
+
+   *,
+   :after,
+   :before {
+      box-sizing: border-box;
+   }
+
+   :root {
+      --primary: #001aff;
+   }
+
+   .page5 .wrap {
+      height: 200vh;
+      background: #222;
+   }
+
+   .page5 {
+      position: relative;
+      height: 100vh;
+      font-size: 16px;
+      color: #777;
+      line-height: 1.8;
+      letter-spacing: -0.3px;
+   }
+
+   .page5 .ceramic-project {
+      position: relative;
+      height: 100vh;
+      font-size: 16px;
+      color: #777;
+      line-height: 2;
+      letter-spacing: -0.3px;
+   }
+
+   .page5 .ceramic-project .tit_area {
+      position: relative;
+      max-width: 50%;
+      margin: 60px 100px 100px;
+      padding-top: 12vh;
+   }
+
+   .page5 .ceramic-project .tit_area .tit {
+      font-size: 52px;
+      color: #222;
+      font-weight: 700;
+      position: relative;
+      top: -55px;
+      left: 18px;
+   }
+
+   .page5 .ceramic-project .tit_area .tit span {
+      color: var(--primary);
+   }
+
+   .page5 .ceramic-project .tit_area .txt {
+      font-size: 18px;
+      color: #777;
+      width: 98%;
+      margin-top: 110.5px;
+      margin-right: -20px;
+      z-index: 9999;
+   }
+
+   .page5 .ceramic-project .img_slide_wrap {
+      padding-bottom: 30px;
+   }
+
+   .page5 .ceramic-project ul {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-left: calc((100% - 1600px) / 2);
+   }
+
+   .page5 .ceramic-project ul li {
+      transition: all 0.3s;
+   }
+
+   .page5 .ceramic-project ul li + li {
+      margin-left: 175px;
+   }
+
+   .page5 .ceramic-project ul li:nth-child(odd) a {
+      width: 750px;
+      height: 52vh;
+   }
+
+   .page5 .ceramic-project ul li:nth-child(even) {
+      margin-top: -150px;
+   }
+
+   .page5 .ceramic-project ul li:nth-child(even) a {
+      width: 445px;
+      height: 55vh;
+   }
+
+   .page5 .ceramic-project ul li:hover {
+      transform: translate(-10px, -10px);
+   }
+
+   .page5 .ceramic-project ul li a {
+      display: block;
+      position: relative;
+      box-shadow: 25px 25px 50px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s;
+   }
+
+   .page5 .ceramic-project ul li a:after {
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background: rgb(1, 1, 1);
+      background: linear-gradient(
+         0deg,
+         rgba(1, 1, 1, 0.5) 0%,
+         rgba(0, 0, 0, 0) 60%
+      );
+      transition: all 0.25s;
+   }
+
+   .page5 .ceramic-project ul li a:hover {
+      box-shadow: 25px 25px 35px rgba(0, 0, 0, 0.2);
+   }
+
+   .page5 .ceramic-project ul li .txt {
+      position: absolute;
+      bottom: 0;
+      z-index: 2;
+      width: 100%;
+      padding: 0 0 60px 55px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #fff;
+   }
+
+   .page5 .ceramic-project ul li .txt p {
+      margin-bottom: -20px;
+      padding-bottom: 20px;
+      font-size: 28px;
+      font-weight: 700;
+   }
+   .page5 .ceramic-project ul li .txt div {
+      margin-top: 10px;
+   }
+   .page5 .ceramic-project ul li .txt {
+      width: 70%;
+      margin-top: 30%;
+      margin-right: 30%;
+   }
+
+   .page5 .ceramic-project ul li img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+
+   .page5 .ceramic-project .bg {
+      position: absolute;
+      bottom: 60px;
+      width: 100%;
+      z-index: -1;
+   }
+
+   .page5 .ceramic-project .bg .flow_txt {
+      position: relative;
+      z-index: -1;
+      opacity: 0.15;
+      font-size: 190px;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 0.65;
+      white-space: nowrap;
+      animation: flow 30s linear infinite;
+   }
+
+   @keyframes flow {
+      from {
+         transform: translateX(0);
+      }
+      to {
+         transform: translateX(-50%);
+      }
    }
 }
