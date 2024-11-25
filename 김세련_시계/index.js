@@ -2,8 +2,8 @@
 document.querySelectorAll("header li").forEach((item, index) => {
     item.addEventListener("click", () => {
         const container = document.getElementById("container");
-        container.style.transition = "margin-top 0.5s ease";
-        container.style.marginTop = `-${index * 100}vh`;
+        container.style.transition = "margin-top 0.5s ease"; 
+        container.style.marginTop = `-${index * 100}vh`; 
     });
 });
 
