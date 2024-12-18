@@ -2833,14 +2833,15 @@ body {
       position: relative;
    }
    /*어바웃 첫화면 보였다가 안보이기*/
-   .pag2_wrap {
-      display: none;
+   .page2_wrap {
+      /* display: none; */
+      display: block;
    }
    .page2 ul {
       width: 100%;
       display: flex;
    }
-   .pag2_wrap ul {
+   .page2_wrap ul {
       width: 35%;
    }
 
@@ -2881,7 +2882,7 @@ body {
 
    .txt {
       position: absolute;
-      right: 20px;
+      right: 150px;
       top: 50px;
       z-index: 99;
    }
@@ -2952,7 +2953,7 @@ body {
 
    .circle-container {
       width: 5%;
-      margin-top: -350px;
+      margin-top: -320px;
       margin-left: 50px;
       display: flex;
       justify-content: space-between;
@@ -2966,6 +2967,7 @@ body {
       background-color: transparent;
    }
    /*---어바웃 두번 째 안보였다 보이기---*/
+
    .profile_wrap {
       opacity: 1;
    }
@@ -3038,10 +3040,16 @@ body {
    }
    .contact-info {
       width: 100%;
-      display: block;
+      /* display: block; */
+      display: flex;
+      gap: 90px;
       align-items: center;
-      justify-content: space-between;
+      /* justify-content: space-between; */
       margin: 30px 0px 40px;
+   }
+   .contact-info li {
+      display: flex;
+      margin-top: 20px;
    }
    .contact-info li p {
       margin-left: 10px;
@@ -3729,7 +3737,8 @@ body {
       font-size: 18px;
       color: #777;
       margin-top: 110.5px;
-      margin-right: -20px;
+      /* margin-right: -20px; */
+      margin-right: -155px;
       z-index: 9999;
    }
 
@@ -3821,7 +3830,8 @@ body {
    .page5 .ceramic-project ul li .txt {
       width: 70%;
       margin-top: 30%;
-      margin-right: 30%;
+      /* margin-right: 20%; */
+      margin-right: 5%;
    }
 
    .page5 .ceramic-project ul li img {
