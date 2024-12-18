@@ -5,7 +5,7 @@
    font-style: normal;
 }
 body {
-   /* overflow-x: hidden; */
+   overflow-x: hidden;
    font-family: "Noto Sans KR", sans-serif;
 }
 
@@ -72,9 +72,7 @@ body {
       right: 0;
       bottom: 0;
       background-image: url("../img/tumblr_nej2ovpxcg1qz6f9yo1_500.webp");
-
       object-fit: cover;
-
       z-index: -1;
    }
    .page1 h1 {
@@ -2576,60 +2574,108 @@ body {
 
 /*PC==================================================================*/
 @media (min-width: 1200px) {
-   /*header*/
+   /* header */
    header {
-      width: 100%;
-      /* background-color: #ccc; */
-      /* box-shadow: 2px 2px 5px #222; */
+      width: 98vw; /* 전체 뷰포트 너비 사용 */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       position: fixed;
       z-index: 999;
+      padding: 20px;
+   }
+
+   header img {
+      width: 45px;
+      display: block;
    }
 
    header ul {
-      width: 100%;
       display: flex;
-      justify-content: space-between;
+      gap: 50px;
    }
-   header li {
-      width: calc(100% / 4);
-      height: 50px;
-      text-align: center;
-      line-height: 50px;
+
+   header li a {
+      color: #fff;
+      text-decoration: none;
    }
-   header a {
+
+   /* 메뉴 hover */
+   header .menu_bar li {
+      position: relative;
+   }
+
+   header .menu_bar div {
+      width: 0;
+      height: 2px;
+      background-color: #fff;
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      transform: translateX(-50%);
+      transition: width 0.5s;
+   }
+
+   header .menu_bar li:hover div {
       width: 100%;
-      height: 100%;
-      display: block;
    }
-   header a:hover {
-      background-color: #222;
-      color: #ccc;
+
+   /* 햄버거바 */
+   header .bugerbar_wrap {
+      width: 25px;
+      height: 20px;
+      position: relative;
+      box-sizing: border-box;
+      cursor: pointer;
+   }
+
+   header .bugerbar_wrap li {
+      width: 100%;
+      height: 3px;
+      background-color: #fff;
+      position: absolute;
+      left: 0;
+      transition: 0.5s;
+   }
+
+   header .bugerbar_wrap li:nth-child(1) {
+      top: 0;
+   }
+   header .bugerbar_wrap li:nth-child(2) {
+      top: 8px;
+   }
+
+   header .bugerbar_wrap li:nth-child(3) {
+      bottom: 0;
+   }
+
+   header .bugerbar_wrap.active li:nth-child(1) {
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+   }
+
+   header .bugerbar_wrap.active li:nth-child(2) {
+      display: none;
+   }
+
+   header .bugerbar_wrap.active li:nth-child(3) {
+      bottom: 50%;
+      transform: translateY(50%) rotate(-45deg);
    }
 
    /*container*/
    #container {
-      width: 100%;
-      /* position: fixed; */
-   }
-   section {
-      width: 100%;
-      height: 100vh;
-      position: relative;
-   }
-   section h1 {
-      font: 100px "arial";
-      position: absolute;
-      left: 51.8%;
-      top: 65%;
-      transform: translate(-50%, -50%);
+      width: 100vw;
    }
 
-   .page1 {
-      width: 100%;
+   #container section {
+      width: 100vw;
       height: 100vh;
       position: relative;
    }
-   .page1::before {
+
+   /* page1 스타일 */
+   #container #page1::before {
       content: "";
       position: absolute;
       top: 0;
@@ -2637,111 +2683,25 @@ body {
       right: 0;
       bottom: 0;
       background-image: url("../img/tumblr_nej2ovpxcg1qz6f9yo1_500.webp");
-
       object-fit: cover;
-
       z-index: -1;
    }
-   .page1 h1 {
-      width: 100%;
-      font-family: "Molend", sans-serif;
-      color: #fff;
-      font-size: 250px;
-      text-align: center;
-      line-height: 120px;
-   }
 
-   /*시계 배경*/
-   .page1 h1 img {
-      width: 205px;
-      position: relative;
-      left: 30px;
-      transform: scaleX(1.1);
-      margin-right: 60px;
-   }
-
-   /* 시계 스타일 */
-   .clock_wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-   }
-
-   .clock {
-      position: relative;
-      height: 300px; /* 크기 줄임 */
-      width: 300px; /* 크기 줄임 */
-      left: 36.5%; /* 위치 조정 */
-      top: 51%; /* 위치 조정 */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-   }
-   .time {
+   #page1 .title_wrap {
       position: absolute;
-      top: 20%;
-      opacity: 1;
+      left: 50%;
+      top: 57%;
+      transform: translate(-50%, -50%);
    }
 
-   /* 시계 중앙 점 */
-   #center {
-      width: 15px; /* 크기 줄임 */
-      height: 15px; /* 크기 줄임 */
-      background-color: #222;
-      border-radius: 50%;
-      z-index: 10;
-      margin-bottom: 1px;
-      margin-left: -5px;
-      /* opacity: 0; */
-   }
-
-   /* 시침 */
-   #hour {
-      position: absolute;
-      width: 6px; /* 크기 줄임 */
-      height: 60px; /* 크기 줄임 */
-      background-color: #222;
-      top: 28px;
-      left: -10px;
-      transform-origin: 50% 100%;
-      transform: rotate(0deg);
-      transition: transform 0.5s ease;
-      border-radius: 50px;
-   }
-
-   /* 분침 */
-   #min {
-      position: absolute;
-      width: 6px; /* 크기 줄임 */
-      height: 65px; /* 크기 줄임 */
-      background-color: #222;
-      top: 25px; /* 위치 조정 */
-      left: -6px;
-      transform-origin: 50% 100%;
-      transform: rotate(0deg);
-      transition: transform 0.5s ease;
-      border-radius: 50px;
-   }
-
-   /* 초침 */
-   #sec {
-      position: absolute;
-      width: 4px; /* 크기 줄임 */
-      height: 75px; /* 크기 줄임 */
-      background-color: red;
-      top: 15px; /* 위치 조정 */
-      left: -5px;
-      transform-origin: 50% 100%;
-      transform: rotate(0deg);
-      transition: transform 0.1s ease;
-      border-radius: 50px;
+   #page1 .port {
+      font-size: 12.5vw !important;
+      margin-bottom: 50px !important;
    }
 
    .page1 p {
       text-align: center;
-      position: relative;
-      top: 265px;
+      margin-bottom: 20px;
       color: #fff;
    }
    .page1 p span {
@@ -2755,6 +2715,108 @@ body {
       position: relative;
       top: -80px;
    }
+
+   #page1 .port,
+   .folio {
+      width: 60vw;
+      margin: 0px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12vw;
+      color: #fff;
+      font-family: "Molend", sans-serif;
+      text-align: center;
+      transform: scaleX(1.1);
+   }
+
+   .clock {
+      width: 11vw;
+      height: 11vw;
+      background-image: url(../img/clock_bg.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+      position: relative;
+      flex-shrink: 0;
+      margin-bottom: 60px;
+   }
+
+   .time {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      /* opacity: 1; */
+   }
+
+   /* 시계 중앙 점 */
+   #center {
+      width: 15px;
+      height: 15px;
+      background-color: #222;
+      border-radius: 50%;
+      z-index: 10;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+   }
+
+   /* 시침 */
+   #hour {
+      position: absolute;
+      width: 6px;
+      height: 50px;
+      background-color: #222;
+      top: 27%;
+      left: 49%;
+      transform-origin: 50% 100%;
+      transform: translateX(-50%) rotate(0deg);
+      transition: transform 0.5s ease;
+      border-radius: 50px;
+   }
+
+   /* 분침 */
+   #min {
+      position: absolute;
+      width: 6px;
+      height: 65px;
+      background-color: #222;
+      top: 20%;
+      left: 49%;
+      transform-origin: 50% 100%;
+      transform: translateX(-50%) rotate(0deg);
+      transition: transform 0.5s ease;
+      border-radius: 50px;
+   }
+
+   /* 초침 */
+   #sec {
+      position: absolute;
+      width: 4px;
+      height: 75px;
+      background-color: red;
+      top: 15%;
+      left: 49%;
+      transform-origin: 50% 100%;
+      transform: translateX(-50%) rotate(0deg);
+      transition: transform 0.1s ease;
+      border-radius: 50px;
+   }
+
+   /* @media (max-width: 1300px) {
+  .page1 h1 .f {
+    margin-right: 7vw;
+  }
+  .page1 h1 .lio {
+    margin-left: 7vw;
+  }
+
+  .clock {
+    left: 34.5%;
+    top: 45%;
+  }
+} */
 
    /*section 전체로 바꾸기*/
    .wrap {
@@ -3102,13 +3164,9 @@ body {
    }
 
    /* --------------- */
-   /* .wrap section:nth-child(2) {
-      background-image: url(../img/bg2.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      overflow: hidden;
-   } */
+   /* --------------- */
+   /* --------------- */
+
    .page3 .project {
       /* font-size: 52px; */
       position: relative;
@@ -3130,10 +3188,11 @@ body {
    .page3-slide-wrap {
       overflow: hidden;
       position: relative;
-      width: 100%;
+      width: 100vw;
       height: 100%;
    }
    .page3-wrap {
+      width: 100vw;
       display: flex;
       padding: 50px 105px;
       position: relative;
@@ -3142,7 +3201,7 @@ body {
    }
 
    .page3-slide {
-      width: 100%; /* 슬라이드 너비는 컨테이너 너비에 따라 */
+      width: 100vw; /* 슬라이드 너비는 컨테이너 너비에 따라 */
       flex-shrink: 0;
    }
    .page3-text {
@@ -3185,7 +3244,7 @@ body {
    .page3-buttons button {
       border: 2px solid #3700ff;
       border-radius: 50px;
-      padding: 10px 46px;
+      padding: 10px 45px;
       font-size: 1rem;
       cursor: pointer;
       font-weight: bold;
@@ -3268,7 +3327,7 @@ body {
    }
 
    .page3-info-box {
-      width: 29%;
+      width: 25.5%;
       border: 1px solid #ddd;
       border-radius: 8px;
       padding: 20px;
@@ -3362,6 +3421,8 @@ body {
    .next i {
       color: #fff;
    }
+   /*page4 - graphic project*/
+   /*page4 - graphic project*/
    /*page4 - graphic project*/
    .page4 .project {
       position: relative;
@@ -3552,6 +3613,60 @@ body {
       border-radius: 4px;
    }
 
+   /* 내비게이션 스타일 */
+   .navi {
+      position: absolute;
+      left: 50%;
+      bottom: 10px;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+   }
+
+   .navi li {
+      width: 20px;
+      height: 20px;
+      background-color: #b5aadf;
+      cursor: pointer;
+      border-radius: 50px;
+      margin-bottom: 50px;
+   }
+
+   .navi li.on {
+      background-color: orange;
+   }
+   /* prev, next 버튼 */
+   .prev,
+   .next {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+   }
+
+   .prev {
+      left: 20px;
+   }
+
+   .next {
+      right: 30px;
+   }
+
+   /* 아이콘 크기 조정 */
+   .icon-large {
+      font-size: 2.5rem;
+   }
+
+   .prev i {
+      color: #fff;
+   }
+   .next i {
+      color: #333;
+   }
+
+   /*page5-ceramic project*/
+   /*page5-ceramic project*/
    /*page5-ceramic project*/
 
    *,
@@ -3565,7 +3680,7 @@ body {
    }
 
    .page5 .wrap {
-      height: 200vh;
+      height: 100vh;
       background: #222;
    }
 
@@ -3575,7 +3690,7 @@ body {
       font-size: 16px;
       color: #777;
       line-height: 1.8;
-      overflow: hidden;
+      /* overflow: hidden; */
       letter-spacing: -0.3px;
    }
 
@@ -3593,6 +3708,7 @@ body {
       max-width: 50%;
       margin: 60px 100px 100px;
       padding-top: 12vh;
+      background-attachment: scroll;
    }
 
    .page5 .ceramic-project .tit_area .tit {
@@ -3609,9 +3725,9 @@ body {
    }
 
    .page5 .ceramic-project .tit_area .txt {
+      width: 98%;
       font-size: 18px;
       color: #777;
-      width: 98%;
       margin-top: 110.5px;
       margin-right: -20px;
       z-index: 9999;

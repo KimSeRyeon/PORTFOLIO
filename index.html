@@ -14,47 +14,80 @@
          crossorigin="anonymous"
          referrerpolicy="no-referrer"
       />
+      <script src="js/jquery-3.7.1.min.js"></script>
       <link rel="stylesheet" href="css/reset.css" />
       <link rel="stylesheet" href="css/index.css" />
-      <script src="js/jquery-3.7.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
       <script src="js/index.js"></script>
       <title>Portfolio_EX</title>
    </head>
    <body>
       <header>
-         <ul>
-            <li><a href="#page1">main</a></li>
-            <li><a href="#page2">about</a></li>
-            <li><a href="#page3">web</a></li>
-            <li><a href="#page4">graphic</a></li>
-            <li><a href="#page5">ceramic</a></li>
-            <li><a href="#page6">contact</a></li>
+         <h1 class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="My_Logo" /></a>
+         </h1>
+         <ul class="menu_bar">
+            <li>
+               <a href="#page2">About</a>
+               <div></div>
+            </li>
+            <li>
+               <a href="#page3">Web</a>
+               <div></div>
+            </li>
+            <li>
+               <a href="#page4">Graphic</a>
+               <div></div>
+            </li>
+            <li>
+               <a href="#page5">Ceramic</a>
+               <div></div>
+            </li>
+            <li>
+               <a href="#page6">Contact</a>
+               <div></div>
+            </li>
+            <li>
+               <ul class="bugerbar_wrap">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+               </ul>
+               <div class="tap"></div>
+            </li>
          </ul>
       </header>
 
       <div id="container">
          <section class="page1" id="page1">
-            <p>
-               Welcome to
-               <span
-                  ><em><strong>seryeon's</strong></em></span
-               >
-            </p>
-            <h1>
-               <span class="port">PORT</span>
-               <span class="folio"
-                  ><br />F<img src="img/clock_bg.png" />LIO</span
-               >
-            </h1>
-
-            <!--시계 초침, 분침, 시침-->
-            <div class="clock">
-               <div id="center"></div>
-               <div class="time">
-                  <div id="hour"></div>
-                  <div id="min"></div>
-                  <div id="sec"></div>
-               </div>
+            <div class="title_wrap">
+               <p>
+                  Welcome to
+                  <span
+                     ><em><strong>seryeon's</strong></em></span
+                  >
+               </p>
+               <ul class="port">
+                  <li>P</li>
+                  <li>O</li>
+                  <li>R</li>
+                  <li>T</li>
+               </ul>
+               <ul class="folio">
+                  <li>F</li>
+                  <li class="clock">
+                     <div id="center"></div>
+                     <div class="time">
+                        <div id="hour"></div>
+                        <div id="min"></div>
+                        <div id="sec"></div>
+                     </div>
+                  </li>
+                  <li>L</li>
+                  <li>I</li>
+                  <li>O</li>
+               </ul>
             </div>
          </section>
 
@@ -636,6 +669,22 @@
                      </ul>
                   </div>
                </div>
+
+               <!-- 내비게이션 -->
+               <ul class="navi">
+                  <li class="on"></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+               </ul>
+
+               <!-- 슬라이드 조작 버튼 -->
+               <a href="#" class="prev">
+                  <i class="fa-solid fa-circle-chevron-left icon-large"></i>
+               </a>
+               <a href="#" class="next">
+                  <i class="fa-solid fa-circle-chevron-right icon-large"></i>
+               </a>
                <div class="page4-shapes">
                   <div class="page4-half-circle"></div>
                   <!-- 큰 파란색 반원 -->
@@ -698,6 +747,44 @@
                                     고양감을 표현하며, 자유와 성취를 향한 자기
                                     발견의 여정을 상징합니다. 고요한 비상 속에서
                                     에너지와 희열이 고조되는 과정을 담았습니다.
+                                 </div>
+                              </div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="">
+                              <img
+                                 src="img/KakaoTalk_20241117_213440069_02.jpg"
+                                 alt="석고 작업"
+                              />
+                              <div class="txt">
+                                 <p>눈속임 컵<span>(Puckish Cup)</span></p>
+                                 <div>
+                                    단단한 세라믹의 형질과 대척점에 있는 푹신한
+                                    소재를 결합하여, 물질적 경계를 허물고,
+                                    형태와 본질의 대조적인 특성을 탐구하는
+                                    작품입니다. 이 작품은 상반된 재료들이 만나
+                                    유기적인 통합을 이루며, 고정된 형태와 유연한
+                                    질감의 공존을 통해 변화와 조화를 상징합니다.
+                                 </div>
+                              </div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="">
+                              <img
+                                 src="img/KakaoTalk_20241117_213440069_02.jpg"
+                                 alt="석고 작업"
+                              />
+                              <div class="txt">
+                                 <p>눈속임 컵<span>(Puckish Cup)</span></p>
+                                 <div>
+                                    단단한 세라믹의 형질과 대척점에 있는 푹신한
+                                    소재를 결합하여, 물질적 경계를 허물고,
+                                    형태와 본질의 대조적인 특성을 탐구하는
+                                    작품입니다. 이 작품은 상반된 재료들이 만나
+                                    유기적인 통합을 이루며, 고정된 형태와 유연한
+                                    질감의 공존을 통해 변화와 조화를 상징합니다.
                                  </div>
                               </div>
                            </a>
@@ -845,10 +932,14 @@
                         ></use>
                      </g>
                   </svg>
-                  <div>@ 2024. Made with by Kim Se Ryeon</div>
+                  <div>@ 2024.🐠 Made with by Kim Se Ryeon</div>
                </div>
             </section>
          </div>
       </div>
+
+      <script>
+         gsap.registerPlugin(ScrollTrigger);
+      </script>
    </body>
 </html>
